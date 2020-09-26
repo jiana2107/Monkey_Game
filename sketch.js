@@ -83,8 +83,8 @@ function draw() {
     obstacleGroup.velocityX=0;
     ground.velocityX=0;
     survivaltime=0;
-    obstacleGroup.setLifetimeEach();
-    bananaGroup.setLifetimeEach();
+    obstacleGroup.setLifetimeEach(-1);
+    bananaGroup.setLifetimeEach(-1);
   }
   
   if(gameState===RESTART){
