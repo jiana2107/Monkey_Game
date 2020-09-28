@@ -74,7 +74,7 @@ function draw() {
     monkey.y=420;
     monkey.velocityY=0;
     banana.velocityX=0;
-     obstacleGroup.setVelocityXEach(0);
+    obstacleGroup.setVelocityXEach(0);
     ground.velocityX=0;
     survivaltime=0;
     //obstacleGroup.setLifetimeEach(-1);
@@ -91,6 +91,7 @@ function draw() {
     banana.velocityX=0;
     obstacleGroup.velocityX=0;
     ground.velocityX=0;
+    obstaclesGroup.setVelocityXEach(0);
     survivaltime=0;
   }
   
