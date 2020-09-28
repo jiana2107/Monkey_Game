@@ -47,10 +47,7 @@ function draw() {
 
   monkey.collide(invisibleGround);
   monkey.collide(invisible);
-  
-  if(keyDown("space") && monkey.y>=400){
-  monkey.velocityY=-12;
-}
+ 
    monkey.velocityY=monkey.velocityY +0.8;
 
   if(monkey.isTouching(bananaGroup)){ 
@@ -62,14 +59,19 @@ function draw() {
   
   if(gameState===PLAY){
     if(keyDown("space") && monkey.y>=0){
-      monkey.velocityY=-6;
-  }
+      monkey.velocityY=-6;}
   food();
   drawobstacles();
     
   if(ground.x<0){
-   ground.x=ground.width/2;
-  }
+   ground.x=ground.width/2; }
+    
+   if(monkey.isTouching(bananaGroup)){ 
+    bananaGroup.destroyEach();
+    score=score+1;}
+  
+  if(monkey.isTouching(obstacleGroup)){
+    gameState=END;}
   }
   
   if(gameState===END){
@@ -112,8 +114,7 @@ function draw() {
   fill("red");
   survivaltime= survivaltime+Math.ceil(frameRate()/60);
   text("Survival Time:"+survivaltime,300,20);
-
-  createEdgeSprites();
+  
   drawSprites();
 }
 
