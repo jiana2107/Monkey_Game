@@ -64,7 +64,7 @@ function draw() {
     score=score+1;}
   
   if(monkey.isTouching(obstacleGroup)){
-    obstacleGroup.velocityX=0;
+    obstacleGroup.destroyEach();
     gameState=END;}
   }
   
