@@ -49,13 +49,6 @@ function draw() {
   monkey.collide(invisible);
  
    monkey.velocityY=monkey.velocityY +0.8;
-
-  if(monkey.isTouching(bananaGroup)){ 
-    bananaGroup.destroyEach();
-    score=score+1;}
-  
-  if(monkey.isTouching(obstacleGroup)){
-    gameState=END;}
   
   if(gameState===PLAY){
     if(keyDown("space") && monkey.y>=0){
